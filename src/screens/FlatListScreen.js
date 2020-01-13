@@ -10,7 +10,7 @@ export default () => {
     return (
         <FlatList
             data={items}
-            renderItem={({ item }) => <Text style={styles.textStyle}>{item.name}- Age {item.age}</Text>}
+            renderItem={({ item }) => <Text style={styles.textStyle}>{item.name} - Age {item.age}</Text>}
             keyExtractor={item => item.name}
         />
     );

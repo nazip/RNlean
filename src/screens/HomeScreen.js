@@ -1,8 +1,23 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>Hello!!1</Text>;
+const HomeScreen = ({navigation}) => {
+  return (
+    <View>
+      <Text style={styles.text}>Main screen</Text>
+      <Button 
+        title="to Image Screen"
+        onPress={() => navigation.navigate('ImageScreen')}
+      />
+      <TouchableOpacity onPress={() => navigation.navigate('ImageScreen')}>
+        <Text>
+          to Image screen (TouchableOpacity)
+        </Text>
+      </TouchableOpacity>
+
+    </View>
+  );
+  
 };
 
 const styles = StyleSheet.create({
